@@ -161,6 +161,7 @@ def test_build_from_arrays_with_text_chunks():
         passages_file = Path(index_path).parent / f"{Path(index_path).name}.passages.jsonl"
         assert passages_file.exists()
         import json
+
         passage_texts = []
         with open(passages_file, encoding="utf-8") as f:
             for line in f:
@@ -260,6 +261,7 @@ def test_build_from_arrays_without_chunks_creates_placeholders():
 
         # Check passages file has placeholder entries
         import json
+
         passages_file = Path(index_path).parent / f"{Path(index_path).name}.passages.jsonl"
         assert passages_file.exists()
         passage_texts = []
